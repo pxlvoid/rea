@@ -1,11 +1,6 @@
 name: Release
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-    types: [closed]
   workflow_dispatch:
     inputs:
       release_branch:
@@ -18,7 +13,6 @@ on:
         default: prepare
         type: choice
         options: [prepare, publish]
-
 env:
   HUSKY: "0"
 

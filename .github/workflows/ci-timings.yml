@@ -1,10 +1,7 @@
 name: CI timings
 
 on:
-  schedule:
-    - cron: "17 * * * *"
   workflow_dispatch:
-
 concurrency:
   group: ci-timings-${{ github.repository }}
   cancel-in-progress: false
